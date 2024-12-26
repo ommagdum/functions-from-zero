@@ -1,8 +1,13 @@
-import wikipedia
+import click
+from mylib.bot import scrape
 
-def scrape(name="Carlos Sainz Jr.", length = 4):
-    result = wikipedia.summary(name, sentences = length)
-    return result
+@click.command() 
+@click.option('--name', prompt='Wikipedia Page To Scrape',
+              help='Entity from wiki to be scraped')
 
+def cli(name):
+    result = scrape(name)
+    click.echo(click.style(f"{result}:", bg ='green', fg='white'))
 
-print(scrape("Instagram"))
+if __name__ == '__main__':
+    cli()
