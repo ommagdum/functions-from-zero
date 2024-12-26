@@ -6,7 +6,7 @@ from mylib.bot import scrape
               help='Entity from wiki to be scraped')
 
 def cli(name):
-    result = scrape(name)
+    result = scrape(name='Mircosoft')
     click.echo(click.style(f"{result}:", bg ='green', fg='white'))
 
 if __name__ == '__main__':
