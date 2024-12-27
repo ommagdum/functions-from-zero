@@ -1,5 +1,6 @@
 from textblob import TextBlob
 import wikipedia
+from nltk.tokenize import sent_tokenize 
 
 
 def search_wikipedia(name):
