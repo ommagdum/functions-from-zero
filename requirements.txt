@@ -3,3 +3,7 @@ pytest
 black
 wikipedia
 ipython
+textblob
+nltk
+fire
+pytest-cov
